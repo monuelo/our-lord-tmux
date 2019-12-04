@@ -18,12 +18,15 @@ body {
 .switch {
   cursor: pointer;
 }
+
 .switch input {
   display: none;
 }
+
 .switch input + div {
   position: relative;
 }
+
 .switch input + div:before, .switch input + div:after {
   --s: 1;
   content: '';
@@ -38,6 +41,7 @@ body {
   transition: transform var(--duration) ease;
   transition: transform var(--duration) ease, -webkit-transform var(--duration) ease;
 }
+
 .switch input + div:before {
   --s: 0;
   left: 0;
@@ -45,17 +49,20 @@ body {
           transform-origin: 0 50%;
   border-radius: 2px 0 0 2px;
 }
+
 .switch input + div:after {
   left: 28px;
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
   border-radius: 0 2px 2px 0;
 }
+
 .switch input + div span {
   padding-left: 56px;
   line-height: 24px;
   color: var(--text);
 }
+
 .switch input + div span:before {
   --x: 0;
   --b: var(--circle);
@@ -74,15 +81,19 @@ body {
   transition: box-shadow var(--duration) ease, transform var(--duration) ease;
   transition: box-shadow var(--duration) ease, transform var(--duration) ease, -webkit-transform var(--duration) ease;
 }
+
 .switch input + div span:not(:empty) {
   padding-left: 64px;
 }
+
 .switch input:checked + div:before {
   --s: 1;
 }
+
 .switch input:checked + div:after {
   --s: 0;
 }
+
 .switch input:checked + div span:before {
   --x: 28px;
   --s: 12px;
@@ -97,6 +108,7 @@ html {
 * {
   box-sizing: inherit;
 }
+
 *:before, *:after {
   box-sizing: inherit;
 }
@@ -110,15 +122,18 @@ body {
   position: relative;
   background: #111111;
 }
+
 body .switch + .switch {
   margin-top: 32px;
 }
+
 body .dribbble {
   position: fixed;
   display: block;
   right: 20px;
   bottom: 20px;
 }
+
 body .dribbble img {
   display: block;
   height: 28px;
